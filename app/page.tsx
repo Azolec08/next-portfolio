@@ -1,3 +1,9 @@
+import { Hero } from "@/features/hero/components/hero";
+
 export default function Home() {
-  return <main className="min-h-screen bg-red-300">main</main>;
+  return (
+    <main>
+      <Hero />
+    </main>
+  );
 }

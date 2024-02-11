@@ -25,7 +25,7 @@ export default function HeaderContactLine() {
   };
 
   return (
-    <div className="bg-backgroundBrowny">
+    <div className="bg-backgroundBrowny hidden lg:block">
       <div className="flex gap-x-3 text-[10px] p-1 mx-20 text-[#E5E5E5]">
         <span
           className="flex gap-x-1 cursor-pointer"

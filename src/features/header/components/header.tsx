@@ -4,24 +4,33 @@ import { headerMenu } from "../constants/header-constants";
 import HeaderContactLine from "./header-contact-line";
 import HeaderDarkLine from "./header-dark-line";
 import HeaderLinks from "./header-links";
+import { SheetDemo } from "./header-sidebar";
 
-export default function navbar() {
+export function Header() {
   return (
     <header className="w-full ">
       <HeaderDarkLine />
       <HeaderContactLine />
-      <div className="flex">
-        <div className="w-full ml-20  flex items-center">
-          <div className="relative w-[70px] h-[50px]">
-            <Image src="/logo.jpg" alt="logoImg" fill />
+      <div className="flex py-2">
+        <div className="w-full flex items-center lg:ml-20">
+          <Image
+            src="/header-img/logo.png"
+            alt="logoImg"
+            width={100}
+            height={100}
+            className="ml-4"
+            priority={true}
+          />
+          <div className=" hidden lg:flex">
+            {headerMenu.map((menu, index) => (
+              <HeaderLinks key={index} menu={menu} />
+            ))}
           </div>
-          {headerMenu.map((menu, index) => (
-            <HeaderLinks key={index} menu={menu} />
-          ))}
         </div>
         <div className="mr-[25px] flex items-center">
           <Button
-            className="rounded-full text-white  text-[10px] font-bold border-[2px]  "
+            className="rounded-full text-white  text-[10px] font-bold border-[2px] 
+             hidden lg:block "
             size="sm"
             style={{
               backgroundColor: "#ffffff",
@@ -32,6 +41,7 @@ export default function navbar() {
           >
             Subscribe
           </Button>
+          <SheetDemo />
         </div>
       </div>
     </header>

@@ -1,4 +1,4 @@
-import Navbar from "@/features/navbar/components/header";
+import { Header } from "@/features/header/components/header";
 import { Toaster } from "@/shared/components/ui/toaster";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navbar />
+        <Header />
         {children}
         <Toaster />
       </body>

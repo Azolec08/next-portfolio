@@ -21,6 +21,9 @@ const config = {
       backgroundColor: {
         backgroundBrowny: "#653a2a",
       },
+      backgroundImage: {
+        heroBigImg: "url('/hero-img/herobigimg.png')",
+      },
       colors: {
         textBrowny: "#4d2615",
         border: "hsl(var(--border))",
